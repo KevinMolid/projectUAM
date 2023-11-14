@@ -35,58 +35,60 @@ let index = 0
 
 /* Selection screen */
 
-characterSelection.innerHTML += charactersArr.map(function(character) {
-  return `
-    <div id='${character.name}'>
-      <img src='images/${character.img}' alt=${character.name}>
-    </div>
-    `
-}).join('')
+function renderCharacterSelectionScreen(){
+    characterSelection.innerHTML += charactersArr.map(function(character) {
+        return `
+          <div id='${character.name}'>
+            <img src='images/${character.img}' alt=${character.name}>
+          </div>
+          `
+      }).join('')
+      
+      charactersArr.forEach(function(character){
+        document.getElementById(character.name).addEventListener('click', function(){
+          // Set player stats
+          playerName = character.name
+          /* Hide all cards */
+          document.getElementById('placeholderCard').classList.add('hide')
+          charactersArr.forEach(function(character){
+            document.getElementById(`${character.name}Card`).classList.add('hide')
+          })
+          /* Show card */
+          document.getElementById(`${character.name}Card`).classList.remove('hide')
+          /* Activate play btn */
+          playBtn.disabled = false
+        }) 
+      })
+      
+        
+      characterCard.innerHTML += charactersArr.map(function(character){
+          return `
+            <div class="hide card" id='${character.name}Card'>
+              <img src='images/${character.img}' alt="Kevin">
+              <h2>${character.name}</h2>
+              <div class="ability">
+                <h3>${character.ability}</h3>
+                <p class="small-text">${character.abilityText}</p>
+              </div>
+              <div class="stats">
+                <p>Str<span class="number">${character.strength}</span></p>
+                <hr>
+                <p>Spe<span class="number">${character.speed}</span></p>
+                <hr>
+                <p>Int<span class="number">${character.intelligence}</span></p>
+                <hr>
+                <p>Wis<span class="number">${character.wisdom}</span></p>
+              </div>
+            </div>
+          `
+      }).join('')
+}
 
-charactersArr.forEach(function(character){
-  document.getElementById(character.name).addEventListener('click', function(){
-    // Set player stats
-    playerName = character.name
-    /* Hide all cards */
-    document.getElementById('placeholderCard').classList.add('hide')
-    charactersArr.forEach(function(character){
-      document.getElementById(`${character.name}Card`).classList.add('hide')
-    })
-    /* Show card */
-    document.getElementById(`${character.name}Card`).classList.remove('hide')
-    /* Activate play btn */
-    playBtn.disabled = false
-  }) 
-})
-
-  
-characterCard.innerHTML += charactersArr.map(function(character){
-    return `
-      <div class="hide card" id='${character.name}Card'>
-        <img src='images/${character.img}' alt="Kevin">
-        <h2>${character.name}</h2>
-        <div class="ability">
-          <h3>${character.ability}</h3>
-          <p class="small-text">${character.abilityText}</p>
-        </div>
-        <div class="stats">
-          <p>Str<span class="number">${character.strength}</span></p>
-          <hr>
-          <p>Spe<span class="number">${character.speed}</span></p>
-          <hr>
-          <p>Int<span class="number">${character.intelligence}</span></p>
-          <hr>
-          <p>Wis<span class="number">${character.wisdom}</span></p>
-        </div>
-      </div>
-    `
-}).join('')
-
-// Event listeners
+/* // Event listeners
 playBtn.addEventListener('click', function(){
   displayGameScreen()
   renderGameScreen(introEvents[currentEventIndex])
-}) 
+}) */
 
 
 // Functions
@@ -144,3 +146,10 @@ function renderButtons(event, index){
     }
   }
 }
+
+// 1. Render Intro
+const midScreen = document.getElementById('mid-screen')
+
+midScreen.innerHTML = `
+    <img class="logo-img" src="images/logo.png">
+`
