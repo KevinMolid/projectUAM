@@ -3,8 +3,30 @@ import { introEvents } from '/gameEvents.js'
 
 const selectionScreen = document.getElementById('selection-screen')
 
+
+
+
+// Top Screen
+const topScreen = document.getElementById('top-screen')
+const topScreenP = document.getElementById('top-screen-p')
+const topScreenH2 = document.getElementById('top-screen-h2')
+
+// Mid Screen
+const midScreen = document.getElementById('mid-screen')
+const midScreenImg = document.getElementById('mid-screen-img')
+
+// Bottom Screen
+const bottomScreen = document.getElementById('bottom-screen')
+const bottomScreenP = document.getElementById('bottom-screen-p')
+const btn1 = document.getElementById('btn-1')
+
+// Game Screen Elements
+const gameScreenElements = [topScreenP, topScreenH2, midScreenImg, bottomScreenP]
+
+
+
+
 // GameScreen
-const gameScreen = document.getElementById('game-screen')
 const npcNameEl = document.getElementById('npc-name')
 const npcImg = document.getElementById('npc-img')
 const playerNameEl = document.getElementById('player-name')
@@ -148,7 +170,16 @@ function renderButtons(event, index){
 }
 
 // 1. Render Intro
-const midScreen = document.getElementById('mid-screen')
-const midScreenImg = document.getElementById('mid-screen-img')
+topScreenP.innerText = 'Kevin Molid'
+topScreenH2.innerText = 'presents'
 
 midScreenImg.src = 'images/logo.png'
+
+bottomScreenP.innerText = 'Project: UAM'
+btn1.innerText = 'New Game'
+
+
+function clearScreen(){
+  gameScreenElements.forEach(element)
+    element.style.display = 'none'
+  }
