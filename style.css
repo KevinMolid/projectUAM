@@ -42,7 +42,7 @@ main {
 .game-grid {
     height: 100%;
     display: grid;
-    grid-template: 20% 60% 20% / 100%;
+    grid-template: 15% 60% 25% / 100%;
 }
 
 .top-screen {
