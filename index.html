@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TRV Madness</title>
+  
+  <!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="
+  style.css">
+</head>
+
+<body>
+  <header>
+    <h1>TRV<span class="thin yellow">Madness</span></h1>
+  </header>
+  
+  <main>
+    
+    <!-- Selection screen -->
+    <div class="selection-screen" id="selection-screen">
+      <div>
+        <h2 class="center choose-text">Choose character</h2>
+        <section id="character-selection">
+        </section>
+      </div>
+      
+      <section id="character-card">
+              <div class="grayscale card" id='placeholderCard'>
+                <img src="images/Default.jpg" alt="placeholder card">
+                <h2>?????</h2>
+                <div class="ability">
+                  <h3>Ability</h3>
+                  <p class="small-text">Ability description</p>
+                </div>
+                <div class="stats">
+                  <p>Str<span class="number">-</span></p>
+                  <hr>
+                  <p>Spe<span class="number">-</span></p>
+                  <hr>
+                  <p>Int<span class="number">-</span></p>
+                  <hr>
+                  <p>Wis<span class="number">-</span></p>
+                </div>
+              </div>
+      </section>
+      
+      <button disabled class="play-btn" id="play-btn">Play</button>
+    </div>
+    
+    <!-- Game Screen -->
+    <div class="game-screen" id="game-screen">
+      <div class="game-screen-text">
+        <p id="npc-name">Name</p>
+        <h2 id="npc-text">Text</h2>
+      </div>
+      <img id="npc-img" class="game-screen-img" src="images/Willy.jpg">
+      <div class="game-screen-choices">
+        <p id="player-name">Name</p>
+        <div class="options" id="options-el">
+          <div class="next btn" id="next-btn">Next</div>
+          <div class="choice btn" id="choice1">1</div>
+          <div class="choice btn" id="choice2">2</div>
+        </div>
+      </div>
+    </div>
+      
+  </main>
+  
+  <!-- Project -->
+  <script src="main.js" type="module"></script>
+</body>
+</html>

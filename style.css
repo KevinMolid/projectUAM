@@ -1,0 +1,287 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/Bg.jpg');
+    background-size: cover;
+    margin: 0;
+    font-size: 10pt;
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Colors */
+  body {
+    color: #fafafa; /* White */
+    background-color: #191919; /* Black */
+  }
+  
+  header {
+    background-color: #01796f; /* Green */
+  }
+  
+  #character-selection div {
+    background-color: #444; /* Grey */
+  }
+  
+  .card h3, 
+  .yellow {
+    color: #fffa33; /* Yellow */
+  }
+  
+  .small-text, 
+  .choose-text {
+    color: #ddd;
+  }
+  
+  /* Borders */
+  
+  .card {
+    border: 1px solid #666;
+  }
+  
+  /* Layout */
+  
+  header {
+    padding: 1em;
+    text-align: center;
+  }
+  
+  main {
+    height: 100%;
+  }
+  
+  .selection-screen {
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 0 2em 0;
+  }
+  
+  h1, h2, h3, h4, p {
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  h1 {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  .choose-text {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  hr {
+    border: 0.5px solid #555;
+    margin: 0.5em;
+  }
+  
+  .small-text {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  #character-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+  }
+  
+  /* Small characters */
+  #character-selection {
+    width: 100vw;
+    background-color: #777;
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    text-align: center;
+  }
+  
+  #character-selection div {
+    font-weight: 600;
+  }
+  
+  #character-selection div:hover {
+    background-color: #01796f;
+  }
+  
+  #character-selection div:hover img {
+    filter: none;
+  }
+  
+  #character-selection img {
+    display: block;
+    filter: grayscale(50%);
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+  }
+  
+  .card {
+    width: 45vw;
+    height: 92vw;
+    text-align: center;
+    background-color: #444;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .card img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 47vw;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card h2 {
+    font-weight: 900;
+  }
+  
+  .ability {
+    padding: 0.5em 0.5em 1em;
+  }
+  
+  .stats {
+    box-sizing: border-box;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    color: #fafafa;
+    background-color: #01796f;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5em;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .stats hr {
+    border: 0.5px solid #fafafa;
+  }
+  
+  .number {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* buttons */
+  .play-btn {
+    width: 75vw;
+    display: block;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 1em 2em;
+    color: #fafafa;
+    background-color: #00b0a0;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .play-btn:disabled {
+    color: #777;
+    background-color: #444;
+    box-shadow: none;
+  }
+  
+  
+  /* Game Screen */
+  .game-screen {
+    box-sizing: border-box;
+    height: 100%;
+    display: none;
+    grid-template: 8.5rem 100vw auto / auto;
+  }
+  
+  .game-screen-img {
+    width: 100vw;
+    height: 100vw;
+    object-fit: cover;
+  }
+  
+  .game-screen-text {
+    padding: 4em 2em 2em 2em;
+    height: fit-content;
+    position: relative;
+    text-align: center;
+  }
+  
+  .game-screen p {
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5em 1em;
+    color: #fffa33;
+    background-color: #333;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+  }
+  
+  .game-screen-choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .btn {
+    font-size: 1.2rem;
+  }
+  
+  .choice {
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 0.5em 1em;
+    color: #fafafa;
+    background-color: #00b0a0;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  #choice1, #choice2 {
+    display: none;
+  }
+  
+  
+  /* Utility */
+  .center {
+    text-align: center;
+  }
+  
+  .margin-bottom {
+    margin-bottom: 1em;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .grayscale img {
+    filter: grayscale(100%);
+    opacity: 70%;
+  }
+  
+  .thin {
+    font-weight: 400;
+  }
