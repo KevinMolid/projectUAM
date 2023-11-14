@@ -149,7 +149,6 @@ function renderButtons(event, index){
 
 // 1. Render Intro
 const midScreen = document.getElementById('mid-screen')
+const midScreenImg = document.getElementById('mid-screen-img')
 
-midScreen.innerHTML = `
-    <img class="logo-img" src="images/logo.png">
-`
+midScreenImg.src = 'images/logo.png'
