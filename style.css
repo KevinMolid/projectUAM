@@ -33,8 +33,6 @@ main {
     justify-content: center;
     align-items: center;
     margin: 0;
-
-    border: 1px solid #999;
 }
 
 .mid-screen-img {
@@ -60,7 +58,6 @@ main {
 
 .bottom-screen {
   height: 100%;
-  border: 1px solid #999;
 }
 
 .bottom-screen-text {
